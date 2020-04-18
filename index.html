@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriel Rodrigues Amador - Portfólio</title>
     <link rel="stylesheet" href="./assets/css/globalStyle.css" type="text/css">
-    <link rel="stylesheet" href="font-awesome/css/all.css">
+    <link rel="stylesheet" href="./assets/font-awesome/css/all.css">
 
     <!-- INCLUIR FAVICON -->
     <link rel="shortcut icon" href="./assets/img/bg.jpg" type="image/x-icon">
@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        <div>
+        <div class="divLogo">
             <img src="" alt="Logo Site">
             <div>
                 <h1>Gabriel Amador</h1>
@@ -23,7 +23,15 @@
         </div>
 
         <nav>
-            <ul>
+            <div>
+                <input type="checkbox" name="hamb" id="hamb" class="checkbox">
+
+                <label class="inputHamb" onclick='abrirMenu()' for="hamb">
+                    <i class="fas fa-bars hambBtn blacksmoke" style="color: #15191D"></i>
+                </label>
+            </div>
+
+            <ul class="menuDesktop">
                 <li class="selecionado"><a href="#">Inicio</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="">Skills</a></li>
@@ -31,10 +39,59 @@
                 <li><a href="">Contatos</a></li>
             </ul>
 
-            <div>
-                <img src="" alt="Icone Facebook">
-                <img src="" alt="Icone Instagram">
-                <img src="" alt="Icone Linkedin">
+            <div class="menuMobile left">
+                <div class="sectionBack">
+                    <input type="checkbox" name="back" id="back" class="checkbox">
+
+                    <label class="inputBack" onclick='fecharMenu()' for="back">
+                        <i class="fas fa-2x fa-arrow-left" style="color: #15191D"></i>
+                    </label>
+                </div>
+
+                <div class="sectionContentMenu">
+                    <div>
+                        <div>
+                            <h3>Gabriel Amador</h3>
+                            <p>Frontend Developer</p>
+                        </div>
+
+                        <ul>
+                            <li><a class="liMenuMobile" onclick="fecharMenu()" href="#"><i class="fa-2x iconMenu fas fa-home"></i>
+                                    <p>Inicio</p>
+                                </a></li>
+                            <li><a class="liMenuMobile" onclick="fecharMenu()" href="#sobre"><i class="fa-2x iconMenu fas fa-info-circle"></i>
+                                    <p>Sobre</p>
+                                </a></li>
+                            <li><a class="liMenuMobile" onclick="fecharMenu()" href="#"><i class="fa-2x iconMenu far fa-lightbulb"></i>
+                                    <p>Skills</p>
+                                </a></li>
+                            <li><a class="liMenuMobile" onclick="fecharMenu()" href="#"><i class="fa-2x iconMenu fas fa-clipboard-check"></i>
+                                    <p>Projetos</p>
+                                </a>
+                            </li>
+                            <li><a class="liMenuMobile" onclick="fecharMenu()" href="#"><i class="fa-2x iconMenu far fa-address-card"></i>
+                                    <p>Contatos</p>
+                                </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footerMenuMb">
+                        <hr />
+                        <p>Todos direitos reservados</p>
+                        <p>Copyrigth 2020</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divRedeSocial">
+                <a href="https://www.facebook.com/gabriel.amador.794" target="_blank">
+                    <i alt="Icone Facebook" style="color: #3B5999;" class="fab fa-facebook-f"> </i> </a>
+
+                <a href="https://www.instagram.com/_amadorzada_/" target="_blank">
+                    <i alt="Icone Instagram" style="color: #BE4B9E;" class="fab fa-instagram"></i></a>
+
+                <a href="https://www.linkedin.com/in/gabriel-rodrigues-amador-b70629182/" target="_blank">
+                    <i alt="Icone Linkedin" style="color: #1472a1;" class="fab fa-linkedin-in"></i> </a>
             </div>
         </nav>
     </header>
@@ -42,52 +99,69 @@
     <main>
         <section class="topo">
             <article>
+                <img src="./assets/img/bgMobile.JPG" class="mobileBg" lt="">
+            </article>
+
+            <article>
                 <div>
-                    <h3>Olá Mundo! me chamo</h3>
-                    <h3>Gabriel Rodrigues Amador</h3>
+                    <h3 class="helloWorld">Olá Mundo! Me chamo</h3>
+                    <h2 class="nomeTitle">Gabriel Rodrigues Amador</h2>
                 </div>
 
-                <ul>
+                <ul class="infoTopo">
                     <!-- INCLUIR MAIS CARACTERISTICAS -->
                     <li>Desenvolvedor <span class="destaque">Backend C#</span> Júnior</li>
                     <li>Desenvolvedor <span class="destaque">FrontEnd</span> Júnior</li>
                 </ul>
             </article>
-
-            <article>
-                <img src="./assets/img/dottet.png" alt="Imagem Pontos Backgroung">
-                <img src="./assets/img/pp.png" alt="Imagem Perfil">
-            </article>
         </section>
 
-        <section class="sobre">
+        <section id="sobre">
             <div>
-                <img src="" alt="Triangulo">
-                <h3>Sobre</h3>
+                <img src="./assets/img/triangle.JPG" class="triangle" alt="Triangulo">
+                <h3 class="h3">Sobre</h3>
             </div>
 
-            <div>
-                <img src="" alt="Imagem Pirâmide">
+            <div class="divContent">
+                <img src="" class="none" alt="Imagem Pirâmide">
 
                 <div>
-                    <h4>Lorem ipusm</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla blanditiis officia
-                        commodi quas facere odio excepturi perferendis eligendi illo, iste eius? Modi voluptatibus
-                        molestiae temporibus ipsa, <span class="destaqueP"> facilis consequuntur </span> ut? Lorem, ipsum dolor sit amet consectetur
-                        adipisicing elit. Ab eveniet doloribus nobis dicta minima nemo quas modi neque aut sunt
-                        cupiditate, mollitia earum Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic soluta
-                        commodi, tenetur voluptate doloremque maiores cupiditate temporibus harum eveniet animi, ea
-                        mollitia, velit perferendis aperiam praesentium vero voluptatem tempora amet? eius in, quae quam
-                        magni perferendis provident?</p>
+                    <h4 class="subtitle">Vamos Lá</h4>
+                    <p>Estudante em <span class="destaqueP">Análise e Desenvolvimento de Sistemas </span> no Senai de Informática desde Janeiro de 2019.
+                        Desenvolvedor com gosto por hardwares e componentes, dados e pela internet.
+
+                        <br/>
+                        <br/>
+
+                        No meu inÍcio de carreira aprofudo meus conhecimentos em  <span class="destaqueP">busca de uma base sólida do
+                        aprendizado</span>, focando
+                        nos mais diversos conteúdos relacionados a Ciências de dados, Arquitetura de hardware,
+                        Linguagens de programação,
+                        Frameworks, Redes de computadores e Múltimídia. Em meus estudos procuro utilizar o princípio de
+                        Pareto, dominando obrigatóriamente 20% do assunto dos quais serão
+                        responsáveis em resolver 80% dos problemas, quando necessário proucuro me especializar no
+                        assunto.
+
+                    </p>
+
                 </div>
             </div>
 
-            <div>
-                <h4>Unity C#</h4>
-                <h4>Adobe Premiere</h4>
-                <h4>Lorem</h4>
-                <h4>Lorem</h4>
+            <div class="divXp">
+                <h4 class="subtitle sb2">Experiência com:</h4>
+
+                <span class="iregularForm" ><h4 class="h4">Scrum</h4></span>
+                <span class="iregularForm r2" ><h4 class="h4">Kanbam</h4></span>
+                <span class="iregularForm r3" ><h4 class="h4">Monitoria</h4></span>
+                <span class="iregularForm r4" ><h4 class="h4">Gestão de <br/> Projetos</h4></span>
             </div>
+
+            <p class="pcenter">
+                Aberto a oportunidades
+
+                <br />
+
+                São Paulo, SP - Brasil </p>
 
         </section>
 
@@ -106,5 +180,19 @@
         <p>Todos os direitos reservados, Copyrigth 2020</p>
     </footer>
 </body>
+
+<script>
+    var menuMobile = document.querySelector('.menuMobile');
+
+    function abrirMenu() {
+        menuMobile.setAttribute('class', 'menuMobile');
+    }
+
+    function fecharMenu() {
+        menuMobile.setAttribute('class', 'menuMobile left');
+
+    }
+
+</script>
 
 </html>

@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: Candara;
+}
+
+.none{
+    display: none;
+}
+
+/* -------------------- NAVBAR E TOPO ----------------------------- */
+
+nav{
+    display: flex;
+    align-items: center;
+    margin: 1em 1em 1.5em 1em;
+    justify-content: space-between;
+}
+
+.divRedeSocial{
+    width: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.topo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: calc(100vh - 50px);
+}
+
+.white{
+    color: white;    
+}
+
+/* -------------------- SOBRE ----------------------------- */
+
+
+
+
+@media (max-width: 480px) { 
+
+    /* -------------------- NAVBAR E TOPO ----------------------------- */
+    
+    .divLogo, .menuDesktop, .checkbox, .infoTopo{
+        display: none;
+    }
+
+    .topo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: calc(100vh - 72px)
+    }
+    
+    .mobileBg{
+        width: 100vw;
+    }
+    
+    .helloWorld{
+        font-style: italic;
+        font-weight: 100;
+        font-size: 22px;
+    }
+    
+    .nomeTitle{
+        color: #A70000;
+        font-size: 30px;
+        margin: .5em 1.2em;
+    }
+    
+    .menuMobile{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 80vw;
+        color: white;
+        
+        flex-direction: column;
+        transition: .200s ease-in-out;
+    }
+
+    hr{
+        margin-bottom: 1em;
+        width: 220px;
+        background: #8D8D8D;
+    }
+    
+    .footerMenuMb{
+        margin-bottom: 2em;
+        text-align: center;
+    }
+    
+    .sectionBack{
+        background-color: rgba(255, 255, 255, 0.95);
+        height: 10vh;
+        display: flex;
+        padding-left: 1em;
+        align-items: center;
+    }
+    
+    .sectionContentMenu{
+        background-color: #15191D;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+    
+    .sectionContentMenu > div > div > h3{
+        font-size: 30px;
+        text-align: center;
+        margin: 1.5em 0 .4em 0em;
+    }
+    
+    .sectionContentMenu > div > div > p{
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 2em;
+        color: #8D8D8D;
+    }
+    
+    .iconMenu{
+        padding: .3em;
+        width: 40px;
+
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    .liMenuMobile {
+        padding-right: 7.5em ;
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+    }
+
+    .liMenuMobile > p{
+        padding-left: 5px;
+        font-size: 18px;
+    }
+    
+    .left{
+        left: -500px;
+        transition: .200s ease-in-out;
+    }
+
+    .hambBtn{
+        font-size: 3em;
+    }
+
+    /* -------------------- SOBRE ----------------------------- */
+    
+    #sobre{
+        background-color: #15191D;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .triangle{
+        width: 20%;
+        margin-top: 2em;
+    }
+
+    .h3{
+        font-size: 30px;
+        margin: .2em 1.2em 1.2em;
+    }
+
+    .subtitle{
+        font-weight: bold;
+        font-size: 22px;
+        text-align: left;
+        margin-bottom: .6em;
+    }
+
+    .sb2{
+        text-align: left;
+        margin: 0 1.5em 1.5em 1.5em;
+    }
+
+    .divContent{
+        margin: 0em 1.5em 3em 1.5em ;
+        text-align: left;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .pcenter{
+        margin-top: 1em;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+
+    .destaqueP{
+        font-weight: bold;
+        color: #03AAD2;
+    }
+
+    .iregularForm{
+        background-color: #03AAD2;
+        width: 60%;
+        height: 150px;
+        display: inline-block;
+        border-radius: 35% 65% 82% 18% / 66% 61% 39% 34% ;
+        align-items: center;
+        margin-bottom: 1em;
+    }
+
+    .r2{
+        border-radius: 49% 51% 59% 41% / 25% 37% 63% 75% ;
+    }
+
+    .r3{
+        border-radius: 81% 19% 16% 84% / 73% 57% 43% 27%    ;
+    }
+
+    .r4{
+        border-radius: 18% 82% 26% 74% / 69% 36% 64% 31% ;
+    }
+
+    .h4{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+        font-size: 25px;
+    }
+
+    
+    
+    
+    
+    
+    
+    
+}
+
+/* Telefones em paisagem a tablet em retrato */
+@media (max-width: 767px) {
+    /* estilos aqui */
+}
+
+/* Tablet em retrato a paisagem e desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+    /* estilos aqui */
+}
+
+/* Desktop grande */
+@media (min-width: 1200px) {
+   /* estilos aqui */
+}
