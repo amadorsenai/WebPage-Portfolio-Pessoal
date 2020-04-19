@@ -27,7 +27,7 @@
                 <input type="checkbox" name="hamb" id="hamb" class="checkbox">
 
                 <label class="inputHamb" onclick='abrirMenu()' for="hamb">
-                    <i class="fas fa-bars hambBtn blacksmoke" style="color: #15191D"></i>
+                    <i class="fas fa-bars hambBtn blacksmoke" style="color: #15191D; cursor: pointer;"></i>
                 </label>
             </div>
 
@@ -44,7 +44,7 @@
                     <input type="checkbox" name="back" id="back" class="checkbox">
 
                     <label class="inputBack" onclick='fecharMenu()' for="back">
-                        <i class="fas fa-2x fa-arrow-left" style="color: #15191D"></i>
+                        <i class="fas fa-2x fa-arrow-left" style="color: #15191D; cursor:pointer"></i>
                     </label>
                 </div>
 
@@ -56,20 +56,25 @@
                         </div>
 
                         <ul>
-                            <li><a class="liMenuMobile" onclick="fecharMenu()" href="#"><i class="fa-2x iconMenu fas fa-home"></i>
+                            <li><a class="liMenuMobile" onclick="fecharMenu()" href="#">
+                                    <i class="fa-2x iconMenu fas fa-home"></i>
                                     <p>Inicio</p>
                                 </a></li>
-                            <li><a class="liMenuMobile" onclick="fecharMenu()" href="#sobre"><i class="fa-2x iconMenu fas fa-info-circle"></i>
+                            <li><a class="liMenuMobile" onclick="fecharMenu()" href="#sobre"><i
+                                        class="fa-2x iconMenu fas fa-info-circle"></i>
                                     <p>Sobre</p>
                                 </a></li>
-                            <li><a class="liMenuMobile" onclick="fecharMenu()" href="#"><i class="fa-2x iconMenu far fa-lightbulb"></i>
+                            <li><a class="liMenuMobile" onclick="fecharMenu()" href="#skills"><i
+                                        class="fa-2x iconMenu far fa-lightbulb"></i>
                                     <p>Skills</p>
                                 </a></li>
-                            <li><a class="liMenuMobile" onclick="fecharMenu()" href="#"><i class="fa-2x iconMenu fas fa-clipboard-check"></i>
+                            <li><a class="liMenuMobile" onclick="fecharMenu()" href="#projetos"><i
+                                        class="fa-2x iconMenu fas fa-clipboard-check"></i>
                                     <p>Projetos</p>
                                 </a>
                             </li>
-                            <li><a class="liMenuMobile" onclick="fecharMenu()" href="#"><i class="fa-2x iconMenu far fa-address-card"></i>
+                            <li><a class="liMenuMobile" onclick="fecharMenu()" href="#contato"><i
+                                        class="fa-2x iconMenu far fa-address-card"></i>
                                     <p>Contatos</p>
                                 </a></li>
                         </ul>
@@ -85,34 +90,40 @@
 
             <div class="divRedeSocial">
                 <a href="https://www.facebook.com/gabriel.amador.794" target="_blank">
-                    <i alt="Icone Facebook" style="color: #3B5999;" class="fab fa-facebook-f"> </i> </a>
+                    <i alt="Icone Facebook" style="color: #3B5999; font-size: 20px;" class="fab iconRd fa-facebook-f"> </i> </a>
 
                 <a href="https://www.instagram.com/_amadorzada_/" target="_blank">
-                    <i alt="Icone Instagram" style="color: #BE4B9E;" class="fab fa-instagram"></i></a>
+                    <i alt="Icone Instagram" style="color: #BE4B9E;" class="fab iconRd fa-instagram"></i></a>
 
                 <a href="https://www.linkedin.com/in/gabriel-rodrigues-amador-b70629182/" target="_blank">
-                    <i alt="Icone Linkedin" style="color: #1472a1;" class="fab fa-linkedin-in"></i> </a>
+                    <i alt="Icone Linkedin" style="color: #1472a1;" class="fab iconRd fa-linkedin-in"></i> </a>
             </div>
         </nav>
     </header>
 
     <main>
         <section class="topo">
-            <article>
-                <img src="./assets/img/bgMobile.JPG" class="mobileBg" lt="">
+            <article class="hidden">
+                <img src="./assets/img/bgMobile.png" class="mobileBg img1" lt="">
+                <img src="./assets/img/bgWeb.png" class="mobileBg img2" lt="">
             </article>
 
-            <article>
+            <article class="contentTopo">
                 <div>
-                    <h3 class="helloWorld">Olá Mundo! Me chamo</h3>
-                    <h2 class="nomeTitle">Gabriel Rodrigues Amador</h2>
+                    <div>
+                        <h3 class="helloWorld">Olá Mundo! Me chamo</h3>
+                        <h2 class="nomeTitle">Gabriel Rodrigues Amador</h2>
+                    </div>
+                    
+                    <ul class="infoTopo">
+                        <!-- INCLUIR MAIS CARACTERISTICAS -->
+                        <li>Desenvolvedor <span class="destaque">Backend C#</span> Júnior</li>
+                        <li>Desenvolvedor <span class="destaque">FrontEnd</span> Júnior</li>
+                        <li>Desenvolvedor <span class="destaque">FrontEnd</span> Júnior</li>
+                        <li>Desenvolvedor <span class="destaque">FrontEnd</span> Júnior</li>
+                    </ul>
                 </div>
 
-                <ul class="infoTopo">
-                    <!-- INCLUIR MAIS CARACTERISTICAS -->
-                    <li>Desenvolvedor <span class="destaque">Backend C#</span> Júnior</li>
-                    <li>Desenvolvedor <span class="destaque">FrontEnd</span> Júnior</li>
-                </ul>
             </article>
         </section>
 
@@ -127,33 +138,42 @@
 
                 <div>
                     <h4 class="subtitle">Vamos Lá</h4>
-                    <p>Estudante em <span class="destaqueP">Análise e Desenvolvimento de Sistemas </span> no Senai de Informática desde Janeiro de 2019.
+                    <p>Estudante em <span class="destaqueP">Análise e Desenvolvimento de Sistemas </span> no Senai de
+                        Informática desde Janeiro de 2019.
                         Desenvolvedor com gosto por hardwares e componentes, dados e pela internet.
 
-                        <br/>
-                        <br/>
+                        <br />
+                        <br />
 
-                        No meu inÍcio de carreira aprofudo meus conhecimentos em  <span class="destaqueP">busca de uma base sólida do
-                        aprendizado</span>, focando
+                        No meu inÍcio de carreira aprofudo meus conhecimentos em <span class="destaqueP">busca de uma
+                            base sólida do
+                            aprendizado</span>, focando
                         nos mais diversos conteúdos relacionados a Ciências de dados, Arquitetura de hardware,
                         Linguagens de programação,
                         Frameworks, Redes de computadores e Múltimídia. Em meus estudos procuro utilizar o princípio de
                         Pareto, dominando obrigatóriamente 20% do assunto dos quais serão
                         responsáveis em resolver 80% dos problemas, quando necessário proucuro me especializar no
                         assunto.
-
                     </p>
-
                 </div>
             </div>
 
             <div class="divXp">
                 <h4 class="subtitle sb2">Experiência com:</h4>
-
-                <span class="iregularForm" ><h4 class="h4">Scrum</h4></span>
-                <span class="iregularForm r2" ><h4 class="h4">Kanbam</h4></span>
-                <span class="iregularForm r3" ><h4 class="h4">Monitoria</h4></span>
-                <span class="iregularForm r4" ><h4 class="h4">Gestão de <br/> Projetos</h4></span>
+                <div>
+                    <span class="iregularForm">
+                        <h4 class="h4">Scrum</h4>
+                    </span>
+                    <span class="iregularForm r2">
+                        <h4 class="h4">Kanbam</h4>
+                    </span>
+                    <span class="iregularForm r3">
+                        <h4 class="h4">Monitoria</h4>
+                    </span>
+                    <span class="iregularForm r4">
+                        <h4 class="h4">Gestão de <br /> Projetos</h4>
+                    </span>
+                </div>
             </div>
 
             <p class="pcenter">
@@ -165,34 +185,174 @@
 
         </section>
 
-        <section class="skills">
-            <h3>Skils</h3>
-            <div>
+        <section id="skills">
+            <h3 class="h3 h3A">Skils</h3>
+            <div class="contentSkills">
                 <div>
-                    <i class="fab fa-js"></i>
-                    <h4>Javascript Vanilla</h4>
+                    <i class="fab iconSkills fa-js"></i>
+                    <h4>Javascript</h4>
                 </div>
+
+                <div>
+                    <i class="fab iconSkills fa-react"></i>
+                    <h4>React.Js <br /> Native</h4>
+                </div>
+
+                <div>
+                    <i class="fab iconSkills fa-html5"></i>
+                    <h4>HTML5</h4>
+                </div>
+
+                <div>
+                    <i class="fab iconSkills fa-css3-alt"></i>
+                    <h4>CSS3</h4>
+                </div>
+
+                <div>
+                    <i class="fas iconSkills fa-5x fa-user"></i>
+                    <h4>UI/UX</h4>
+                </div>
+
+                <div>
+                    <img src="./assets/img/c-logo.svg" class="iconSkills iconc" alt="Icon C#">
+                    <h4>Csharp</h4>
+                </div>
+
+                <div>
+                    <i class="fab iconSkills fa-5x fa-microsoft"></i>
+                    <h4>ASP.NET</h4>
+                </div>
+
+                <div>
+                    <i class="fas fa-5x iconSkills fa-cogs"></i>
+                    <h4>API</h4>
+                </div>
+
+                <div>
+                    <i class="fas fa-5x iconSkills fa-database"></i>
+                    <h4>MongoDb</h4>
+                </div>
+
+                <div>
+                    <i class="fas fa-5x iconSkills fa-server"></i>
+                    <h4>SQL Server</h4>
+                </div>
+
+
+
             </div>
+        </section>
+
+        <section id="projetos">
+            <h3 class="h3" style="color: white;"><img src="./assets/img/tri.JPG" class="trianguloTitle"
+                    alt="Forma triangular"> Projetos</h3>
+
+            <div>
+                <div class="slidesContent">
+                    <img class="imgSlide fade" src="./assets/img/tramparBoard.png" alt="">
+                    <img class="imgSlide fade" src="./assets/img/opflixBoardimg.png" alt="">
+                    <img class="imgSlide fade" src="./assets/img/boardHamb.png" alt="">
+                    <img class="imgSlide fade" src="./assets/img/scaniaBoard.png" alt="">
+                    <div>
+                        <a class="voltar" onclick="backSlide(-1)">&#10094;</a>
+                        <a class="proximo" onclick="nextSlide(1)">&#10095;</a>
+                    </div>
+                    </img>
+                </div>
+
+                <div class="subSlidesContent">
+                    <img onclick="backSlide(1)" class="imgSubSlide" src="./assets/img/tramparBoard.png" alt="">
+                    <img onclick="backSlide(2)" class="imgSubSlide" src="./assets/img/opflixBoardimg.png" alt="">
+                    <img onclick="backSlide(3)" class="imgSubSlide" src="./assets/img/boardHamb.png" alt="">
+                    <img onclick="backSlide(4)" class="imgSubSlide" src="./assets/img/scaniaBoard.png" alt="">
+                </div>
+
+            </div>
+
+            <a class="btnGit" target="_blank" href="https://www.github.com/amadorsenai">
+                <i alt="Icone Octocat" class="fab github fa-github-alt"></i>
+                github.com/amadorsenai
+            </a>
+
+        </section>
+
+        <section id="contato">
+            <h3 class="h3 h3A">Contato</h3>
+            <p>
+                Entre em contato comigo pelas minhas redes sociais ou pelo número abaixo, estou disponível
+                quase sempre ;)
+
+                <br />
+                <br />
+
+                WhatsApp: (11)946694649
+                <br>
+                gabrielramador2014@gmail.com
+            </p>
         </section>
     </main>
 
     <footer>
         <p>Todos os direitos reservados, Copyrigth 2020</p>
     </footer>
+
+
+    <script>
+        var contadorSlides = 1;
+        var menuMobile = document.querySelector('.menuMobile');
+        var arraySlides = document.getElementsByClassName('imgSlide');
+        var arraySubSlides = document.getElementsByClassName('imgSubSlide');
+        mostrarSlides(contadorSlides);
+        console.log(arraySubSlides);
+
+        function abrirMenu() {
+            menuMobile.setAttribute('class', 'menuMobile');
+        }
+
+        function fecharMenu() {
+            menuMobile.setAttribute('class', 'menuMobile left');
+        }
+
+        function nextSlide(number) {
+            mostrarSlides(contadorSlides += number);
+        }
+
+        function backSlide(number) {
+            mostrarSlides(contadorSlides = number);
+        }
+
+        function mostrarSlides(number) {
+            var i;
+
+            // Caso esteja no slide 3 e aperte next reinicia
+            if (number > arraySlides.length) {
+                contadorSlides = 1;
+            }
+
+            // Caso esteja no slide 0 e aperte back vai ao ultimo
+            if (number < 1) {
+                contadorSlides = arraySlides.length;
+            }
+
+            for (i = 0; i < arraySlides.length; i++) {
+                arraySlides[i].style.display = "none";
+            }
+
+            arraySlides[contadorSlides - 1].style.display = "block";
+
+            displaySubSlides(contadorSlides - 1);
+
+        }
+
+        function displaySubSlides(number) {
+            for (i = 0; i < arraySlides.length; i++) {
+                arraySubSlides[i].style.display = "block";
+            }
+
+            arraySubSlides[number].style.display = "none";
+        }
+
+    </script>
 </body>
-
-<script>
-    var menuMobile = document.querySelector('.menuMobile');
-
-    function abrirMenu() {
-        menuMobile.setAttribute('class', 'menuMobile');
-    }
-
-    function fecharMenu() {
-        menuMobile.setAttribute('class', 'menuMobile left');
-
-    }
-
-</script>
 
 </html>

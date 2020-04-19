@@ -1,13 +1,21 @@
 *{
     margin: 0;
     padding: 0;
-    list-style-type: none;
     text-decoration: none;
     font-family: Candara;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 .none{
     display: none;
+}
+
+.hidden{
+    overflow: hidden;
 }
 
 /* -------------------- NAVBAR E TOPO ----------------------------- */
@@ -20,57 +28,104 @@ nav{
 }
 
 .divRedeSocial{
-    width: 80px;
+    width: 100px;
     display: flex;
     justify-content: space-around;
 }
 
 .topo{
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
     height: calc(100vh - 50px);
+    padding: 0 1em
 }
 
 .white{
     color: white;    
 }
 
-/* -------------------- SOBRE ----------------------------- */
+ul{
+    list-style-type: none;    
+}
+
+
+/* Desktop grande */
+@media (min-width: 1200px) {
+
+    .infoTopo{
+        font-size: 20px;
+        list-style-type: circle;
+    }
+    
+    .infoTopo > li{
+        cursor: pointer;
+        transition: .5s ease;
+
+    }
+    .infoTopo > li:hover > .destaque{
+        color: #a70000;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .infoTopo > li:hover {
+        font-style: italic;
+    }
+
+    .contentTopo{
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
 
 
 
 
-@media (max-width: 480px) { 
+    /* estilos aqui */
+
+}
+ 
+
+@media (max-width: 979px) { 
 
     /* -------------------- NAVBAR E TOPO ----------------------------- */
     
-    .divLogo, .menuDesktop, .checkbox, .infoTopo{
+    .divLogo, .menuDesktop, .checkbox, .img1, .infoTopo{
         display: none;
+    }
+    .img2{
+        margin-bottom: 2em;
     }
 
     .topo{
         display: flex;
-        flex-direction: column;
+        flex-direction: row-reverse;
         justify-content: space-evenly;
-        height: calc(100vh - 72px)
+        flex-direction: column;
+        height: 73vh;
+        margin-bottom: 4em;
     }
+
+    .topo > article{
+        display: flex;
+    } 
     
     .mobileBg{
-        width: 100vw;
+        width: 60vw;
     }
     
     .helloWorld{
         font-style: italic;
         font-weight: 100;
-        font-size: 22px;
+        font-size: 25px;
     }
     
     .nomeTitle{
-        color: #A70000;
-        font-size: 30px;
-        margin: .5em 1.2em;
+        color: #f00001;
+        font-size: 35px;
+        margin: .5em 0em;
     }
     
     .menuMobile{
@@ -78,7 +133,7 @@ nav{
         top: 0;
         left: 0;
         height: 100vh;
-        width: 80vw;
+        width: 40vw;
         color: white;
         
         flex-direction: column;
@@ -94,13 +149,17 @@ nav{
     .footerMenuMb{
         margin-bottom: 2em;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     
     .sectionBack{
         background-color: rgba(255, 255, 255, 0.95);
         height: 10vh;
         display: flex;
-        padding-left: 1em;
+        padding-left: 1.5em;
         align-items: center;
     }
     
@@ -111,9 +170,15 @@ nav{
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+        border-right: 1px solid #e4e4e4;
+
         
     }
-    
+
+    .sectionContentMenu > div{
+        width: 80%;
+    }
+
     .sectionContentMenu > div > div > h3{
         font-size: 30px;
         text-align: center;
@@ -129,31 +194,37 @@ nav{
     
     .iconMenu{
         padding: .3em;
-        width: 40px;
+        width: 2em;
 
         display: flex;
-        text-align: center;
+        text-align: center!important;
         justify-content: center;
         align-items: center;
     }
     
-    
     .liMenuMobile {
-        padding-right: 7.5em ;
+        margin: 1em 0 0 -1em ;
         color: white;
         font-weight: bold;
         font-size: 15px;
         display: flex;
         align-items: center;
     }
-
+    
+    
+    .liMenuMobile:hover {
+        color:#03AAD2;
+        background-color: rgb(35, 35, 35); 
+        transition: .5s ease;
+    }
+    
     .liMenuMobile > p{
         padding-left: 5px;
         font-size: 18px;
     }
     
     .left{
-        left: -500px;
+        left: -800px;
         transition: .200s ease-in-out;
     }
 
@@ -161,9 +232,26 @@ nav{
         font-size: 3em;
     }
 
+    .hambBtn:active, .fa-arrow-left:active{
+        animation: fade 1.5s;
+    }
+
+    .iconRd{
+        font-size: 20px;
+        padding: 5px;
+        border-radius: 8px;
+        transition: ease .5s;
+    }
+
+    .iconRd:hover{
+        color: #a70000!important;
+    }
+    
+
     /* -------------------- SOBRE ----------------------------- */
     
     #sobre{
+        padding: 0 2em 4em 2em;
         background-color: #15191D;
         color: white;
         display: flex;
@@ -172,38 +260,51 @@ nav{
     }
 
     .triangle{
-        width: 20%;
-        margin-top: 2em;
+        width: 100px;
+        margin-top: 4em;
     }
 
     .h3{
-        font-size: 30px;
+        font-size: 35px;
         margin: .2em 1.2em 1.2em;
+    }
+
+    .divContent{
+        margin: 0em 1.5em 3em 1.5em ;
+        text-align: left;
+        font-size: 18px;
+        line-height: 1.8;
+        font-weight: normal;
+    }
+
+    .divXp{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .divXp > div{
+        width: 100%;
     }
 
     .subtitle{
         font-weight: bold;
-        font-size: 22px;
+        font-size: 30px;
         text-align: left;
         margin-bottom: .6em;
     }
 
     .sb2{
         text-align: left;
-        margin: 0 1.5em 1.5em 1.5em;
-    }
-
-    .divContent{
-        margin: 0em 1.5em 3em 1.5em ;
-        text-align: left;
-        font-size: 16px;
-        line-height: 1.8;
+        padding: 0 0 1.5em 1.5em;
+        width: 100%;
     }
 
     .pcenter{
-        margin-top: 1em;
+        margin-top: 3em;
         text-align: center;
-        margin-bottom: 2em;
+        margin-bottom: 0em;
     }
 
     .destaqueP{
@@ -213,12 +314,12 @@ nav{
 
     .iregularForm{
         background-color: #03AAD2;
-        width: 60%;
-        height: 150px;
+        width: 180px;
+        height: 130px;
         display: inline-block;
-        border-radius: 35% 65% 82% 18% / 66% 61% 39% 34% ;
         align-items: center;
-        margin-bottom: 1em;
+        margin: 1em 1em 1em 1em;
+        border-radius: 35% 65% 82% 18% / 66% 61% 39% 34% ;
     }
 
     .r2{
@@ -242,26 +343,331 @@ nav{
         font-size: 25px;
     }
 
+    /* ------------------------------ SKILLS -------------------------------------- */
+
+    #skills{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 4em;
+    }
+
+    .iconSkills{
+        font-size: 100px;
+        color: #03AAD2;
+        width: 90px;
+        margin: 10px 0em;
+    }
     
+    .contentSkills > div{
+        display: flex;
+        margin: 0 1em;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .h3A{
+        margin-top: 2em;
+        color: #03AAD2;
+    }
+
+    .contentSkills{
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+
+        max-width: 700px;
+    }
+
+    .contentSkills > div > h4{
+        font-weight: normal;
+        font-size: 18px;
+        margin-bottom: 1em;
+    }
+
+    /* ---------------------------  PROJETOS ----------------------------- */
+
+    #projetos{
+        background-color: #15191D;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2em 0;
+    }
+
+    #projetos > h3{
+        display: flex;
+        align-items: center;   
+        width: 100%;
+        text-align: center;    
+        justify-content: center; 
+    }
+
+    .trianguloTitle{
+        width: 15%;
+        height: 15%;
+        margin: 0 2em 0 -6em ;
+    }
+
+    .slidesContent > img{
+        width: 100vw;
+    }
     
+    .subSlidesContent{
+        display: flex;
+        justify-content: space-around;
+        margin: -1.5em 0 3em 0;
+        padding: 0em 2em;
+    }
     
+    .imgSubSlide {
+        width: 30%;
+        opacity: 0.7;
+        display: none;
+        border-radius: 2px;
+        cursor: pointer;
+        border: 4px solid transparent;
+    }
+
+    .imgSubSlide:hover{
+        border: 4px solid #03AAD2;
+    }
+
+    .slidesContent > div{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1em;
+        width: 88%;
+    }
     
+    .slidesContent > div > a{
+        position: relative;
+        top: -290px;
+        left: 0;
+
+        color: #03AAD2;
+        font-size: 3em;
+        font-weight: bold;
+        cursor: pointer;
+        transition: ease .5s;
+    }
+
+    .slidesContent > div > a:hover{
+        color: rgb(146, 146, 146);
+    }
+
+    .slidesContent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imgSlide{
+        display: none;
+        animation-name: fade;
+        animation-duration: 1500ms;
+        width: 88%!important;
+    }
+
+    @keyframes fade {
+        from{
+            opacity: .7;
+        }to{
+            opacity: 1;
+        }
+    }
+
+    .btnGit{
+        background-color: #03AAD2;
+        width: 250px;
+        color: black;
+        font-weight: bolder;
+        padding: .8em;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: 1px solid gray;
+        margin-bottom: 1em;
+    }
+
+    .btnGit:hover{
+        opacity: .8;
+    }
+
+    .github{
+        font-size: 25px;
+    }
+
+    /* ------------------------ CONTATO ------------------------------ */
+
+    #contato{
+        text-align: center;
+        margin: 0 1.5em;
+
+        font-size: 18px;
+        line-height: 1.8;
+        font-weight: normal;
+        padding-bottom: 4em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    #contato > p{
+        width: 70%;
+    }
     
+    /* ---------------------- FOOTER ---------------------------- */
     
+    footer{
+        height: 100px;
+        width: 100%;
+        background-color: #15191D;
+        color: white;
+        font-style: italic;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     
 }
 
-/* Telefones em paisagem a tablet em retrato */
 @media (max-width: 767px) {
-    /* estilos aqui */
+    .mobileBg{
+        width: 90vw;
+    }
+
+    .slidesContent > div > a{
+        top: -230px;
+    }
+
+    .menuMobile{
+        width: 50vw;
+    }
+
+    .img1, .nome1{
+        display: flex;
+    }
+
+    .img2, .infoTopo{
+        display: none;
+    }
+
+    .nomeTitle{
+        text-align: center;
+        margin: .5em 1.2em;
+    }
+
+    .helloWorld{
+        text-align: center;
+    }
+    .topo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: calc(100vh - 72px);
+    }
+
+    .nomeTitle{
+        color: #f00001;
+        font-size: 30px;
+        margin: .5em 0em;
+    }
+
+    #sobre{
+        padding: 0 0 4em 0;
+    }
+
+    .divXp > div{
+        width: 80%;
+    }
+
+    .iregularForm{
+        width: 200px;
+        height: 150px;
+    }
+
+    .h3{
+        font-size: 30px;
+    }
+
+    .h4{
+        font-size: 30px;
+    }
+    
+    #contato > p{
+        width: 100%;
+    }
+
 }
 
-/* Tablet em retrato a paisagem e desktop */
-@media (min-width: 768px) and (max-width: 979px) {
-    /* estilos aqui */
-}
+@media (max-width: 480px) {
+    .mobileBg{
+        width: 100vw;
+    }
 
-/* Desktop grande */
-@media (min-width: 1200px) {
-   /* estilos aqui */
+    .liMenuMobile {
+        margin: 0em 0 0 -1em ;
+    }
+
+    .menuMobile{
+        width: 80vw;
+    }
+
+    .triangle{
+        width: 20%;
+        margin-top: 2em;
+    }
+
+    .divContent{
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .trianguloTitle{
+        width: 25%;
+        height: 25%;
+    }
+
+    #projetos{
+        padding-top: 1em;
+    }
+
+    #projetos > h3{
+        margin-bottom: 1em;
+    }
+
+    .subSlidesContent{
+        padding: 0;
+    }
+
+    .imgSlide{
+        width: 100%!important;
+    }
+
+    .slidesContent{
+        display: block;
+    }
+
+    .slidesContent > div{
+       width: 100%;
+    }
+
+    .slidesContent > div > a{
+        font-size: 2em;
+        top: -150px;
+    }
+
+    .divRedeSocial{
+        width: 80px;
+    }
+
 }
