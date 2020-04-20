@@ -651,6 +651,7 @@ ul{
         height: 15%;
     }
 
+
 }
  
 @media (max-width: 979px) { 
@@ -705,7 +706,7 @@ ul{
     }
           
     #projetos > div{
-        display:block;
+        display: block;
     }
 
     .subSlidesContent{
@@ -826,9 +827,6 @@ ul{
         margin-bottom: 4em;
         padding-bottom: 0;
     }
-
-
-
 }
 
 @media (max-width: 510px){
@@ -901,8 +899,15 @@ ul{
     }
 
     #skills{
-        min-height: 100vh;
+        height: unset;
+    }
 
+    #projetos > div{
+        margin: 0 0em 0em 0em;
+    }
+
+    #contato{
+        margin: 2em 0 3em 0;
     }
 
 }
